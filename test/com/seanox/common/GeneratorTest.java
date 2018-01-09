@@ -32,7 +32,7 @@ import com.seanox.test.utils.ResourceUtils;
 import com.seanox.test.utils.Timing;
 
 /**
- *  TestCases for {@link com.seanox.common.Generator}.<br>
+ *  Test cases for {@link com.seanox.common.Generator}.<br>
  *  <br>
  *  GeneratorTest 5.1 20171231<br>
  *  Copyright (C) 2017 Seanox Software Solutions<br>
@@ -43,7 +43,7 @@ import com.seanox.test.utils.Timing;
  */
 public class GeneratorTest extends AbstractTest {
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_1() {
         
@@ -51,7 +51,7 @@ public class GeneratorTest extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent("testAcceptance_1_1"), new String(generator.extract()));
     }
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_2() {
         
@@ -59,7 +59,7 @@ public class GeneratorTest extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent("testAcceptance_2_1"), new String(generator.extract()));
     }
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_3() {
         
@@ -67,7 +67,7 @@ public class GeneratorTest extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent(), new String(generator.extract()));
     }
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_4() {
         
@@ -84,7 +84,7 @@ public class GeneratorTest extends AbstractTest {
     }
     
     /** 
-     *  TestCase for acceptance. 
+     *  Test case for acceptance. 
      *  @throws Exception
      */
     @Test
@@ -109,7 +109,7 @@ public class GeneratorTest extends AbstractTest {
     }
     
     /** 
-     *  TestCase for acceptance. 
+     *  Test case for acceptance. 
      *  @throws Exception
      */
     public void testAcceptance_6() throws Exception {
@@ -133,7 +133,7 @@ public class GeneratorTest extends AbstractTest {
         timing.assertTimeIn(1250);
     }    
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     public void testAcceptance_7() {
         
         Generator generator = Generator.parse(ResourceUtils.getContent("testAcceptance_0_1").getBytes());
@@ -152,7 +152,7 @@ public class GeneratorTest extends AbstractTest {
         timing.assertTimeIn(1250);
     }
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_8() {
         
@@ -168,7 +168,7 @@ public class GeneratorTest extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent(), new String(generator.extract()));
     }
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_9() {
         
@@ -184,7 +184,7 @@ public class GeneratorTest extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent(), new String(generator.extract()));
     }
 
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_A() {
         
@@ -200,14 +200,14 @@ public class GeneratorTest extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent(), new String(generator.extract()));
     }
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_B() {
         
         Assert.assertEquals("A\00\00\07\00\00B", new String(Generator.parse(("A#[0x0000070000]B").getBytes()).extract()));
     }
 
-    /** TestCase for recursion. */
+    /** Test case for recursion. */
     @Test
     public void testRecursion_1() {
         
@@ -218,7 +218,7 @@ public class GeneratorTest extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent(), new String(generator.extract()));
     }   
     
-    /** TestCase for recursion. */
+    /** Test case for recursion. */
     @Test
     public void testRecursion_2() {
         
@@ -231,7 +231,7 @@ public class GeneratorTest extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent(), new String(generator.extract()));
     }   
     
-    /** TestCase for recursion. */
+    /** Test case for recursion. */
     @Test
     public void testRecursion_3() {
         
@@ -250,7 +250,7 @@ public class GeneratorTest extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent(), new String(generator.extract()));
     }    
     
-    /** TestCase for recursion. */
+    /** Test case for recursion. */
     @Test
     public void testRecursion_4() {
         
@@ -269,7 +269,7 @@ public class GeneratorTest extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent(), new String(generator.extract()));
     }    
 
-    /** TestCase for recursion. */
+    /** Test case for recursion. */
     @Test
     public void testRecursion_5() {
         
@@ -283,7 +283,7 @@ public class GeneratorTest extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent(), new String(generator.extract()));
     } 
     
-    /** TestCase for recursion. */
+    /** Test case for recursion. */
     @Test
     public void testRecursion_6() {
         
@@ -298,7 +298,7 @@ public class GeneratorTest extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent(), new String(generator.extract()));
     } 
     
-    /** TestCase for recursion. */
+    /** Test case for recursion. */
     @Test
     public void testRecursion_7() {
         
@@ -314,7 +314,7 @@ public class GeneratorTest extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent(), new String(generator.extract()));
     }
     
-    /** TestCase for recursion. */
+    /** Test case for recursion. */
     @Test
     public void testRecursion_8() {
         
@@ -331,7 +331,7 @@ public class GeneratorTest extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent(), new String(generator.extract()));
     }     
 
-    /** TestCase for recursion. */
+    /** Test case for recursion. */
     @Test
     public void testRecursion_9() {
         
@@ -348,7 +348,7 @@ public class GeneratorTest extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent(), new String(generator.extract()));
     } 
     
-    /** TestCase for nullable. */
+    /** Test case for nullable. */
     @Test
     public void testNullable_1() {
       

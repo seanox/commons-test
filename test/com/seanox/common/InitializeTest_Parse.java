@@ -28,7 +28,7 @@ import com.seanox.AbstractTest;
 import com.seanox.test.utils.ResourceUtils;
 
 /**
- *  TestCases for {@link com.seanox.common.Initialize#parse(String)}.<br>
+ *  Test cases for {@link com.seanox.common.Initialize#parse(String)}.<br>
  *  <br>
  *  InitializeTest_Parse 5.1 20171231<br>
  *  Copyright (C) 2017 Seanox Software Solutions<br>
@@ -39,7 +39,7 @@ import com.seanox.test.utils.ResourceUtils;
  */
 public class InitializeTest_Parse extends AbstractTest {
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_1() {
         
@@ -47,7 +47,7 @@ public class InitializeTest_Parse extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent("testAcceptance_1_1"), initialize.toString());
     }
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_2() {
 
@@ -55,7 +55,7 @@ public class InitializeTest_Parse extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent("testAcceptance_2_1"), initialize.toString());
     }
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_3() {
 
@@ -63,7 +63,7 @@ public class InitializeTest_Parse extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent("testAcceptance_3_1"), initialize.toString());
     }
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_4() {
 
@@ -71,7 +71,7 @@ public class InitializeTest_Parse extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent("testAcceptance_4_1"), initialize.toString());
     }
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_5() {
 
@@ -79,7 +79,7 @@ public class InitializeTest_Parse extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent("testAcceptance_5_1"), initialize.toString());
     }
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_6() {
 
@@ -87,7 +87,7 @@ public class InitializeTest_Parse extends AbstractTest {
         Assert.assertEquals(ResourceUtils.getContent("testAcceptance_6_1"), initialize.toString());
     }  
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_7() {
 

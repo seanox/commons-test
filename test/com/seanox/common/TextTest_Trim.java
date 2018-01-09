@@ -27,7 +27,7 @@ import org.junit.Test;
 import com.seanox.AbstractTest;
 
 /**
- *  TestCases for {@link com.seanox.common.Text}.<br>
+ *  Test cases for {@link com.seanox.common.Text}.<br>
  *  <br>
  *  TextTest_Trim 5.0 20180107<br>
  *  Copyright (C) 2018 Seanox Software Solutions<br>
@@ -38,7 +38,7 @@ import com.seanox.AbstractTest;
  */
 public class TextTest_Trim extends AbstractTest {
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_1() {
         
@@ -53,7 +53,7 @@ public class TextTest_Trim extends AbstractTest {
         Assert.assertEquals("A", Text.trim("\01\02\03A\01"));
     }
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_2() {
         
@@ -68,7 +68,7 @@ public class TextTest_Trim extends AbstractTest {
         Assert.assertEquals("A", Text.trim("\01\02\03A\01", false));
     }   
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_3() {
         

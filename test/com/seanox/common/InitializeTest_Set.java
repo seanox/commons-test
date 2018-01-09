@@ -27,7 +27,7 @@ import org.junit.Test;
 import com.seanox.AbstractTest;
 
 /**
- *  TestCases for {@link com.seanox.common.Initialize#set(String, Section)}.<br>
+ *  Test cases for {@link com.seanox.common.Initialize#set(String, Section)}.<br>
  *  <br>
  *  InitializeTest_Set 5.1 20171231<br>
  *  Copyright (C) 2017 Seanox Software Solutions<br>
@@ -38,7 +38,7 @@ import com.seanox.AbstractTest;
  */
 public class InitializeTest_Set extends AbstractTest {
     
-    /** TestCase for a invalid key. */
+    /** Test case for a invalid key. */
     @Test(expected=Exception.class)
     public void testKeyInvalid_1() {
         
@@ -46,7 +46,7 @@ public class InitializeTest_Set extends AbstractTest {
         initialize.set("", null);
     }
     
-    /** TestCase for a invalid key. */
+    /** Test case for a invalid key. */
     @Test(expected=IllegalArgumentException.class)
     public void testKeyInvalid_2() {
         
@@ -54,7 +54,7 @@ public class InitializeTest_Set extends AbstractTest {
         initialize.set(" ", null);
     }
 
-    /** TestCase for a invalid key. */
+    /** Test case for a invalid key. */
     @Test(expected=IllegalArgumentException.class)
     public void testKeyInvalid_3() {
         
@@ -62,7 +62,7 @@ public class InitializeTest_Set extends AbstractTest {
         initialize.set("   ", null);
     }
 
-    /** TestCase for a invalid key. */
+    /** Test case for a invalid key. */
     @Test(expected=IllegalArgumentException.class)
     public void testKeyInvalid_5() {
         
@@ -70,7 +70,7 @@ public class InitializeTest_Set extends AbstractTest {
         initialize.set(null, null);
     }
 
-    /** TestCase for a invalid key. */
+    /** Test case for a invalid key. */
     @Test(expected=IllegalArgumentException.class)
     public void testKeyInvalid_6() {
 
@@ -78,7 +78,7 @@ public class InitializeTest_Set extends AbstractTest {
         initialize.set(" \0\0 ", null);
     }
 
-    /** TestCase for a invalid key. */
+    /** Test case for a invalid key. */
     @Test(expected=IllegalArgumentException.class)
     public void testKeyInvalid_7() {
         
@@ -86,7 +86,7 @@ public class InitializeTest_Set extends AbstractTest {
         initialize.set(" \r\n ", null);
     }
     
-    /** TestCase for a invalid key. */
+    /** Test case for a invalid key. */
     @Test(expected=IllegalArgumentException.class)
     public void testKeyInvalid_8() {
         
@@ -94,7 +94,7 @@ public class InitializeTest_Set extends AbstractTest {
         initialize.set(" \07\07 ", null);
     }
 
-    /** TestCase for a invalid key. */
+    /** Test case for a invalid key. */
     @Test(expected=IllegalArgumentException.class)
     public void testKeyInvalid_9() {
         
@@ -102,7 +102,7 @@ public class InitializeTest_Set extends AbstractTest {
         initialize.set(" \20\20 ", null);
     }
 
-    /** TestCase for a invalid key. */
+    /** Test case for a invalid key. */
     @Test(expected=IllegalArgumentException.class)
     public void testKeyInvalid_A() {
         
@@ -110,7 +110,7 @@ public class InitializeTest_Set extends AbstractTest {
         initialize.set(" \17\17 ", null);
     }
     
-    /** TestCase for key tolerance. */
+    /** Test case for key tolerance. */
     @Test
     public void testKeyTolerance_1() {
         
@@ -142,7 +142,7 @@ public class InitializeTest_Set extends AbstractTest {
         Assert.assertEquals(section5, initialize.get("a"));
     }
     
-    /** TestCase for overwrite a key. */
+    /** Test case for overwrite a key. */
     @Test
     public void testKeyOverwrite_1() {
         

@@ -40,7 +40,8 @@ import com.seanox.AbstractSuite;
 @Suite.SuiteClasses({
     GeneratorTest.class,
     InitializeTest.class,
-    SectionTest.class
+    SectionTest.class,
+    TextTest.class
 })
 public class Test extends AbstractSuite {
 }

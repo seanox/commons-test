@@ -21,29 +21,33 @@
  */
 package com.seanox.common;
 
-import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
+import org.junit.Assert;
+import org.junit.Test;
 
-import com.seanox.AbstractSuite;
+import com.seanox.AbstractTest;
 
 /**
- *  TestSuite for {@link com.seanox.common.Text}.<br>
+ *  Test cases for {@link com.seanox.common.Text}.<br>
  *  <br>
- *  TextTest 5.0 20180107<br>
+ *  TextTest_Escape 5.0 20180107<br>
  *  Copyright (C) 2018 Seanox Software Solutions<br>
  *  All rights reserved.
  *
  *  @author  Seanox Software Solutions
  *  @version 5.0 20180107
  */
-@RunWith(Suite.class)
-@Suite.SuiteClasses({
-    TextTest_Escape.class,
-    TextTest_Phonetic.class,
-    TextTest_SortNatural.class,
-    TextTest_Split.class,
-    TextTest_Unescape.class,
-    TextTest_Trim.class
-})
-public class TextTest extends AbstractSuite {
+public class TextTest_Escape extends AbstractTest {
+    
+    /** Test case for acceptance. */
+    @Test
+    public void testAcceptance_1() {
+        
+        Assert.assertNull(Text.escape(null));
+        Assert.assertEquals("", Text.escape(""));
+        Assert.assertEquals(" ", Text.escape(" "));
+        Assert.assertEquals("\\000\\001\\002\\007\\0008\\0009\\000A\\000d\\360\\372\\377", Text.escape("\00\01\02\07\08\09\0A\0d\u00F0\u00FA\u00FF"));
+        Assert.assertEquals("\\000\\001\\002\\007\\b\\t\\n\\013\\f\\r\\360\\372\\377", Text.escape("\00\01\02\07\010\011\012\013\014\015\u00F0\u00FA\u00FF"));
+        Assert.assertEquals("\\u02A0\\u07B0\\u0AC0\\336", Text.escape("\u02A0\u07B0\u0AC0\u00DE"));
+        Assert.assertEquals("\\b\\t\\n\\f\\r\\\"\\'\\\\", Text.escape("\b\t\n\f\r\"\'\\"));
+    }
 }

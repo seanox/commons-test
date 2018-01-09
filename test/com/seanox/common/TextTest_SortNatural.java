@@ -32,7 +32,7 @@ import com.seanox.test.utils.ResourceUtils;
 import com.seanox.test.utils.TextUtils;
 
 /**
- *  TestCases for {@link com.seanox.common.Text}.<br>
+ *  Test cases for {@link com.seanox.common.Text}.<br>
  *  <br>
  *  TextTest_SortNatural 5.0 20180107<br>
  *  Copyright (C) 2018 Seanox Software Solutions<br>
@@ -43,7 +43,7 @@ import com.seanox.test.utils.TextUtils;
  */
 public class TextTest_SortNatural extends AbstractTest {
     
-    /** TestCase for acceptance. */
+    /** Test case for acceptance. */
     @Test
     public void testAcceptance_1() {
         

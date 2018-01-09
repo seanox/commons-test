@@ -4,7 +4,7 @@
  *  Diese Software unterliegt der Version 2 der GNU General Public License.
  *
  *  Seanox Commons, Advanced Programming Interface
- *  Copyright (C) 2017 Seanox Software Solutions
+ *  Copyright (C) 2018 Seanox Software Solutions
  *
  *  This program is free software; you can redistribute it and/or modify it
  *  under the terms of version 2 of the GNU General Public License as published
@@ -25,49 +25,45 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import com.seanox.AbstractTest;
-import com.seanox.test.utils.ResourceUtils;
 
 /**
- *  Test cases for {@link com.seanox.common.Initialize}.<br>
+ *  Test cases for {@link com.seanox.common.Text}.<br>
  *  <br>
- *  InitializeTest_ToString 5.1 20171231<br>
- *  Copyright (C) 2017 Seanox Software Solutions<br>
+ *  TextTest_Split 5.0 20180107<br>
+ *  Copyright (C) 2018 Seanox Software Solutions<br>
  *  All rights reserved.
  *
  *  @author  Seanox Software Solutions
- *  @version 5.0 20171231
+ *  @version 5.0 20180107
  */
-public class InitializeTest_ToString extends AbstractTest {
+public class TextTest_Split extends AbstractTest {
     
     /** Test case for acceptance. */
     @Test
     public void testAcceptance_1() {
         
-        Initialize initialize = Initialize.parse(ResourceUtils.getContent());
-        Assert.assertEquals(ResourceUtils.getContent("testAcceptance_1_1"), initialize.toString());
+        Assert.assertArrayEquals(new String[] {"a", "", "", ""}, Text.split("a:::", ":"));
+        Assert.assertArrayEquals(new String[] {""}, Text.split("", ":"));
+        Assert.assertArrayEquals(new String[] {"a..."}, Text.split("a...", ":"));
+        Assert.assertArrayEquals(new String[] {"a:::"}, Text.split("a:::", ""));
     }
     
     /** Test case for acceptance. */
     @Test
     public void testAcceptance_2() {
         
-        Initialize initialize = Initialize.parse(ResourceUtils.getContent());
-        Assert.assertEquals(ResourceUtils.getContent("testAcceptance_2_1"), initialize.toString());
+        Assert.assertArrayEquals(new String[] {"a:::"}, Text.split("a:::", null));
+        Assert.assertArrayEquals(new String[] {""}, Text.split("", null));
+        Assert.assertArrayEquals(new String[] {"a..."}, Text.split("a...", null));
+        Assert.assertArrayEquals(new String[] {"a:::"}, Text.split("a:::", null));        
     }
     
     /** Test case for acceptance. */
     @Test
     public void testAcceptance_3() {
-        
-        Initialize initialize = Initialize.parse(ResourceUtils.getContent());
-        Assert.assertEquals(ResourceUtils.getContent("testAcceptance_3_1"), initialize.toString());
-    }
-    
-    /** Test case for acceptance. */
-    @Test
-    public void testAcceptance_4() {
-        
-        Initialize initialize = Initialize.parse(ResourceUtils.getContent());
-        Assert.assertEquals(ResourceUtils.getContent("testAcceptance_4_1"), initialize.toString());
-    }
+
+        Assert.assertNull(Text.split(null, ":"));
+        Assert.assertNull(Text.split(null, ""));
+        Assert.assertNull(Text.split(null, null));
+    }    
 }
