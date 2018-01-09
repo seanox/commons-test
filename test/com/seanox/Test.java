@@ -4,7 +4,7 @@
  *  Diese Software unterliegt der Version 2 der GNU General Public License.
  *
  *  Seanox Commons, Advanced Programming Interface
- *  Copyright (C) 2018 Seanox Software Solutions
+ *  Copyright (C) 2017 Seanox Software Solutions
  *
  *  This program is free software; you can redistribute it and/or modify it
  *  under the terms of version 2 of the GNU General Public License as published
@@ -19,34 +19,24 @@
  *  with this program; if not, write to the Free Software Foundation, Inc.,
  *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-package com.seanox.common;
+package com.seanox;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
-import com.seanox.AbstractSuite;
-
 /**
- *  TestSuite for {@link com.seanox.common.Text}.<br>
+ *  TestSuite for com.seanox.<br>
  *  <br>
- *  TextTest 5.0 20180107<br>
- *  Copyright (C) 2018 Seanox Software Solutions<br>
+ *  Test 5.0 20171231<br>
+ *  Copyright (C) 2017 Seanox Software Solutions<br>
  *  All rights reserved.
  *
  *  @author  Seanox Software Solutions
- *  @version 5.0 20180107
+ *  @version 5.0 20171231
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-    TextTest_Decorate.class,
-    TextTest_Escape.class,
-    TextTest_Phonetic.class,
-    TextTest_Replace.class,
-    TextTest_SortNatural.class,
-    TextTest_Split.class,
-    TextTest_Undecorate.class,
-    TextTest_Unescape.class,
-    TextTest_Trim.class
+    com.seanox.common.Test.class
 })
-public class TextTest extends AbstractSuite {
+public class Test extends AbstractSuite {
 }
